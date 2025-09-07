@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'theme.dart';
-import 'screens/home_screen.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Namaz App',
-      theme: AppTheme.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      title: 'My Namaz App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: 'NotoSans',
+      ),
+      home: const HomePage(),
     );
   }
 }
